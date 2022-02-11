@@ -35,3 +35,9 @@ export type Type = {
   slot: number
   type: Species
 }
+
+export type PokemonsLoaderData = {
+  id: number
+  name: string
+  url: string
+}
