@@ -3,7 +3,7 @@ import { Chain, Specie } from './Pokemon.types'
 export const ARTWORK_IMAGE =
   'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork'
 
-export function getPageByUrl(requestUrl: string) {
+export const getPageByUrl = (requestUrl: string) => {
   const url = new URL(requestUrl)
   const page = url.searchParams.get('page')
   const numberPage = !isNaN(Number(page)) ? Number(page) : 0
@@ -16,10 +16,10 @@ function getIdByUrl(url: string) {
   return parts[parts.length - 2]
 }
 
-export function evolutionRecursive(
+export const evolutionRecursive = (
   chainParent: Chain | Chain[],
   species: Specie[] = []
-): Specie[] {
+): Specie[] => {
   const chain = Array.isArray(chainParent) ? chainParent[0] : chainParent
   const envolveTo = chain.evolves_to
 

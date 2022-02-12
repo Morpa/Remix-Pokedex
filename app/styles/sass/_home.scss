@@ -8,7 +8,7 @@
   padding: 1.5rem;
   text-decoration: none;
   border-radius: 0.5rem;
-  -webkit-box-shadow: 0px 0px 22px 4px rgba(0,0,0,0.06); 
+  -webkit-box-shadow: 0px 0px 22px 4px rgba(0,0,0,0.06);
   box-shadow: 0px 0px 22px 4px rgba(0,0,0,0.06);
 }
 
@@ -22,7 +22,6 @@
 .pokemon-card:hover img {
   filter: grayscale(0%);
 }
-
 
 .pokemon-card__content {
   width: 100%;
@@ -106,8 +105,8 @@ main .wrap-button {
 }
 
 .wrap-button button {
-  background-color: #222;
-  color: #fff;
+  background-color: #F1DA27;
+  color: #060A2B;
   height: 3.5rem;
   max-width: 18.75rem;
   width: 100%;

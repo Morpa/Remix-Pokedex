@@ -8,6 +8,11 @@ export type Chain = {
   species: Species
 }
 
+export type Specie = {
+  name: string
+  image: string
+}
+
 export type Species = {
   name: string
   url: string

@@ -15,6 +15,7 @@
 .evolution {
   flex-direction: column;
 }
+
 .evolution__card + .evolution__card::after {
   transform: rotate(135deg);
   left: 0;
