@@ -18,8 +18,16 @@ export type Species = {
   url: string
 }
 
+type Stat = {
+  base_stat: number
+  effort: number
+  stat: Species
+}
+
 export type Pokemon = {
   id: number
+  name: string
+  stats: Stat[]
   types: Type[]
   sprites: Sprites
 }

@@ -1,10 +1,15 @@
-import { LoaderFunction } from 'remix'
+import { LinksFunction, LoaderFunction } from 'remix'
 
 import { PokemonApi, PokemonUtils } from '~/features/pokedex'
 import { Home } from '~/features/pokedex/layouts/home'
+import homeStyle from '~/styles/home.css'
+
+export const links: LinksFunction = () => [
+  { href: homeStyle, rel: 'stylesheet' }
+]
 
 export function ErrorBoundary() {
-  return <h3>Whoops! 💣</h3>
+  return <h3 className="error">Whoops! 💣</h3>
 }
 
 export const loader: LoaderFunction = async ({ request }) => {
@@ -15,6 +20,6 @@ export const loader: LoaderFunction = async ({ request }) => {
   }
 }
 
-export default function Index() {
+export default function () {
   return <Home />
 }
