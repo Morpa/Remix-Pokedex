@@ -1,3 +1,4 @@
+import nProgressUrl from 'nprogress/nprogress.css'
 import {
   Links,
   LinksFunction,
@@ -8,6 +9,8 @@ import {
   ScrollRestoration
 } from 'remix'
 import type { MetaFunction } from 'remix'
+
+import { useNProgress } from './hooks/use-nprogress'
 
 import globalStyle from '~/styles/global.css'
 import typeStyle from '~/styles/type-colors.css'
@@ -32,11 +35,14 @@ export const links: LinksFunction = () => [
     href: 'https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=VT323&display=swap',
     rel: 'stylesheet'
   },
+  { rel: 'stylesheet', href: nProgressUrl },
   { href: globalStyle, rel: 'stylesheet' },
   { href: typeStyle, rel: 'stylesheet' }
 ]
 
 export default function App() {
+  useNProgress()
+
   return (
     <html lang="en">
       <head>

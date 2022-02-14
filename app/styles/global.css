@@ -18,3 +18,15 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'VT323', monospace;
   letter-spacing: 1px;
 }
+
+#nprogress {
+  pointer-events: none;
+}
+
+#nprogress .bar {
+  background: #F1DA27;
+}
+
+#nprogress .spinner-icon {
+  display: none;
+}
